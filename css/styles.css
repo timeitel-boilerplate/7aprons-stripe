@@ -1,22 +1,21 @@
-/*
-
-Eatery Cafe Template 
-
-http://www.templatemo.com/tm-515-eatery
-
-*/
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
   background: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Open Sans', sans-serif !important;
   overflow-x: hidden;
 }
 
 /*---------------------------------------
      TYPOGRAPHY              
   -----------------------------------------*/
+
+#id,
+.menu-section {
+  font-family: 'Montserrat', sans-serif;
+}
 
 h1,
 h2,
@@ -222,7 +221,7 @@ section {
 }
 
 .custom-navbar .navbar-brand span {
-  color: #ce3232;
+  color: #e53e3e;
 }
 
 .top-nav-collapse {
@@ -231,6 +230,11 @@ section {
 
 .custom-navbar .navbar-nav.navbar-nav-first {
   margin-left: 8em;
+}
+
+navbar-right {
+  display: flex;
+  align-items: center;
 }
 
 .custom-navbar .navbar-nav.navbar-right li a {
@@ -335,16 +339,17 @@ section {
 
 #home h1 {
   color: #ffffff;
-  padding-bottom: 30px;
+  font-size: 3.5em;
 }
 
 #home h3 {
   color: #f9f9f9;
-  font-size: 14px;
+  font-size: 18px;
   line-height: inherit;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
@@ -395,23 +400,36 @@ section {
 }
 
 .slider .item {
-  background-position: inherit;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: local;
   background-size: cover;
   height: 650px;
 }
 
+.slider .item .container {
+  color: white;
+}
+
 .slider .item-first {
-  background-image: url(../images/slider-image1.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/landing/nasi-campur.jpg');
+  background-position: center center;
+  background-size: cover;
 }
 
 .slider .item-second {
-  background-image: url(../images/slider-image2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/landing/siomay.jpg');
+  background-position: center center;
+  background-size: cover;
 }
 
 .slider .item-third {
-  background-image: url(../images/slider-image3.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/landing/sate-babi.jpg');
+  background-position: center center;
+  background-size: cover;
 }
 
 .slider .item-second .section-btn {
@@ -420,11 +438,6 @@ section {
 
 .slider .item-second .section-btn:hover {
   background: #ffffff;
-}
-
-.slider .item-third .section-btn {
-  background: transparent;
-  border: 1px solid #ffffff;
 }
 
 .slider .item-third .section-btn:hover,
@@ -591,9 +604,8 @@ section {
 
 .menu-thumb .menu-info p {
   color: #d9d9d9;
-  text-transform: uppercase;
   font-size: 10px;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
@@ -693,7 +705,8 @@ section {
 }
 
 #contact input {
-  height: 55px;
+  height: 30px;
+  padding: 5px;
 }
 
 #contact button#cf-submit {
@@ -748,7 +761,7 @@ footer .social-icon {
 
 .footer-open-hour {
   background: #ce3232;
-  background: url('../images/footer-open-hour-bg.jpg') center center no-repeat;
+  background: url('../images/catering.jpg') center bottom no-repeat;
   background-size: cover;
   border-radius: 20px;
   margin-top: 0;
@@ -969,4 +982,120 @@ footer .social-icon {
 .featured-header {
   text-align: start;
   margin: 0 0 1rem 2rem;
+}
+
+/*---------------------------------------
+     Button
+  -----------------------------------------*/
+.btn-aprons {
+  color: white;
+  background-color: #e53e3e;
+  border-radius: 5px;
+}
+
+.btn-aprons:hover {
+  box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, 0.0625);
+  background-color: rgba(206, 50, 50, 0.8);
+}
+
+.btn-aprons:active {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+.menu-thumb img {
+  height: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.menu-thumb .siomay-img {
+  object-position: 20%;
+}
+
+.menu-thumb .sate-babi-2-img {
+  object-position: 0 80%;
+}
+
+.menu-thumb .nasi-liwet-komplit-img {
+  object-position: 0 40%;
+}
+
+.menu-thumb .balado-img {
+  object-position: 0 65%;
+}
+
+.menu-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.menu-item {
+  width: 80%;
+  margin-right: 10px;
+}
+
+.menu-item p {
+  line-height: 1.3;
+}
+
+.order-form {
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.order-btn {
+  padding: 4px 8px;
+  font-size: 2.2rem;
+  font-weight: normal;
+  border: none;
+  margin-top: 20px;
+}
+
+.form-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.form-container label {
+  color: #2d3748;
+  text-align: left;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.form-container input {
+  border-radius: 2px;
+  border: 1px solid #a0aec0;
+}
+
+.form-container .field {
+  margin-bottom: 15px;
+}
+
+.cost-hr {
+  margin: 10px 0;
+}
+
+.text-area {
+  border: 1px solid #a0aec0;
+  border-radius: 2px;
+}
+
+.order-confirmation {
+  color: #2f855a;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.landing-carousel {
+  text-shadow: black 0px 0px 1px;
 }

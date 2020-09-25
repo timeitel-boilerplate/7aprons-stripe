@@ -1,53 +1,53 @@
 (function ($) {
-  "use strict";
+  'use strict';
 
   // PRE LOADER
   $(window).load(function () {
-    $(".preloader").fadeOut(1000); // set duration in brackets
+    $('.preloader').fadeOut(1000); // set duration in brackets
   });
 
   // MENU
-  $(".navbar-collapse a").on("click", function () {
-    $(".navbar-collapse").collapse("hide");
+  $('.navbar-collapse a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
   });
 
   $(window).scroll(function () {
-    if ($(".navbar").offset().top > 50) {
-      $(".navbar-fixed-top").addClass("top-nav-collapse");
+    if ($('.navbar').offset().top > 50) {
+      $('.navbar-fixed-top').addClass('top-nav-collapse');
     } else {
-      $(".navbar-fixed-top").removeClass("top-nav-collapse");
+      $('.navbar-fixed-top').removeClass('top-nav-collapse');
     }
   });
 
   // SLIDER
-  $(".owl-carousel").owlCarousel({
-    animateOut: "fadeOut",
+  $('.owl-carousel').owlCarousel({
+    animateOut: 'fadeOut',
     items: 1,
     loop: true,
     autoplayHoverPause: false,
     autoplay: true,
     autoplayTimeout: 8000,
-    smartSpeed: 1000,
+    smartSpeed: 2000
   });
 
   // PARALLAX EFFECT
   $.stellar({
-    horizontalScrolling: false,
+    horizontalScrolling: false
   });
 
   // MAGNIFIC POPUP
-  $(".image-popup").magnificPopup({
-    type: "image",
+  $('.image-popup').magnificPopup({
+    type: 'image',
     removalDelay: 300,
-    mainClass: "mfp-with-zoom",
+    mainClass: 'mfp-with-zoom',
     gallery: {
-      enabled: true,
+      enabled: true
     },
     zoom: {
       enabled: true, // By default it's false, so don't forget to enable it
 
       duration: 300, // duration of the effect, in milliseconds
-      easing: "ease-in-out", // CSS transition easing function
+      easing: 'ease-in-out', // CSS transition easing function
 
       // The "opener" function should return the element from which popup will be zoomed in
       // and to which popup will be scaled down
@@ -55,11 +55,11 @@
       opener: function (openerElement) {
         // openerElement is the element on which popup was initialized, in this case its <a> tag
         // you don't need to add "opener" option if this code matches your needs, it's defailt one.
-        return openerElement.is("img")
+        return openerElement.is('img')
           ? openerElement
-          : openerElement.find("img");
-      },
-    },
+          : openerElement.find('img');
+      }
+    }
   });
 
   /*
@@ -98,13 +98,13 @@
 
   // SMOOTHSCROLL
   $(function () {
-    $(".custom-navbar a, #home a").on("click", function (event) {
+    $('.custom-navbar a, #home a').on('click', function (event) {
       var $anchor = $(this);
-      $("html, body")
+      $('html, body')
         .stop()
         .animate(
           {
-            scrollTop: $($anchor.attr("href")).offset().top - 49,
+            scrollTop: $($anchor.attr('href')).offset().top - 49
           },
           1000
         );

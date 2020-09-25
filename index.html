@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>7 Aprons | Restaurant</title>
+    <title>7 Aprons | Catering & Delivery</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="description" content="" />
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/magnific-popup.css" />
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/templatemo-style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- PRE LOADER -->
@@ -31,7 +31,10 @@
     </section>
 
     <!-- MENU -->
-    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <section
+      class="navbar custom-navbar navbar-fixed-top menu-section"
+      role="navigation"
+    >
       <div class="container">
         <div class="navbar-header">
           <button
@@ -52,8 +55,8 @@
           <ul class="nav navbar-nav navbar-nav-first">
             <li><a href="#home" class="smoothScroll">Home</a></li>
             <li><a href="#menu" class="smoothScroll">Menu</a></li>
-            <li><a href="#team" class="smoothScroll">Chefs</a></li>
             <li><a href="#about" class="smoothScroll">About</a></li>
+            <li><a href="#team" class="smoothScroll">Chefs</a></li>
             <li><a href="#contact" class="smoothScroll">Contact</a></li>
           </ul>
 
@@ -61,7 +64,7 @@
             <li>
               <a href="tel:0449787801">Text Order | 0449 787 801</a>
             </li>
-            <a href="#footer" class="section-btn">Online order</a>
+            <a href="#contact" class="section-btn btn-aprons">Online order</a>
           </ul>
         </div>
       </div>
@@ -70,16 +73,19 @@
     <!-- HOME -->
     <section id="home" class="slider" data-stellar-background-ratio="0.5">
       <div class="row">
-        <div class="owl-carousel owl-theme">
+        <div class="owl-carousel owl-theme landing-carousel">
           <div class="item item-first">
             <div class="caption">
               <div class="container">
                 <div class="col-md-8 col-sm-12">
-                  <h3>Authentic indonesian cuisine</h3>
-                  <h1>Our mission is to provide an unforgettable experience</h1>
+                  <h1>Authentic Asian Cuisine</h1>
+                  <h3 class="mb-2">
+                    Using common, Asian ingredients to ensure we convey the
+                    authenticity of flavours into our meals.
+                  </h3>
                   <a
                     href="#menu"
-                    class="section-btn btn btn-default smoothScroll"
+                    class="section-btn btn btn-aprons smoothScroll"
                     >Menu</a
                   >
                 </div>
@@ -91,12 +97,16 @@
             <div class="caption">
               <div class="container">
                 <div class="col-md-8 col-sm-12">
-                  <h3>Your Local Family Restaurant</h3>
-                  <h1>All dishes made fresh to order</h1>
+                  <h1>Home-Made Meals</h1>
+                  <h3>
+                    We take pride in knowing every meal is filled with quality
+                    ingredients made from scratch in our kitchens in South
+                    Guildford.
+                  </h3>
 
                   <a
                     href="#team"
-                    class="section-btn btn btn-default smoothScroll"
+                    class="section-btn btn btn-aprons smoothScroll"
                     >Meet our chefs</a
                   >
                 </div>
@@ -108,13 +118,14 @@
             <div class="caption">
               <div class="container">
                 <div class="col-md-8 col-sm-12">
-                  <h3>Specials this weekend</h3>
-                  <h1>
-                    Enjoy our gado-gado on special every Friday and Sunday
-                  </h1>
+                  <h1>For Your Convenience</h1>
+                  <h3>
+                    We take the stress and trouble out of meal-prepping, with
+                    meals packed and delivered to your door.
+                  </h3>
                   <a
                     href="#menu"
-                    class="section-btn btn btn-default smoothScroll"
+                    class="section-btn btn btn-aprons smoothScroll"
                     >Menu</a
                   >
                 </div>
@@ -132,7 +143,7 @@
           <div class="col-md-12 col-sm-12">
             <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
               <h2>Our Menu</h2>
-              <h4>Authentic Indonesian Cuisine</h4>
+              <h4>Authentic Indonesian / Malaysian Cuisine</h4>
             </div>
           </div>
           <h3 class="featured-header">Featured Dishes</h3>
@@ -141,20 +152,23 @@
             <!-- MENU THUMB -->
             <div class="menu-thumb">
               <a
-                href="images//menu/menu1.jpg"
+                href="images/menu/siomay.jpg"
                 class="image-popup"
                 title="Gudeg"
               >
                 <img
-                  src="images//menu/menu1.jpg"
-                  class="img-responsive"
+                  src="images/menu/siomay.jpg"
+                  class="img-responsive siomay-img"
                   alt=""
                 />
 
                 <div class="menu-info">
                   <div class="menu-item">
-                    <h3>Gudeg</h3>
-                    <p>Jackfruit / Chicken / Braised Beef</p>
+                    <h3>Siomay</h3>
+                    <p>
+                      Steamed fish dumpling with vegetables served in peanut
+                      sauce.
+                    </p>
                   </div>
                   <div class="menu-price">
                     <span>$20</span>
@@ -168,20 +182,22 @@
             <!-- MENU THUMB -->
             <div class="menu-thumb">
               <a
-                href="images/menu/menu2.jpg"
+                href="images/menu/sate-babi-2.jpg"
                 class="image-popup"
-                title="Nasi Liwet"
+                title="Sate Babi"
               >
                 <img
-                  src="images/menu/menu2.jpg"
-                  class="img-responsive"
+                  src="images/menu/sate-babi-2.jpg"
+                  class="img-responsive sate-babi-2-img"
                   alt=""
                 />
 
                 <div class="menu-info">
                   <div class="menu-item">
-                    <h3>Nasi Liwet</h3>
-                    <p>Shredded chicken & broth / Coconut milk</p>
+                    <h3>Sate Babi</h3>
+                    <p>
+                      Balinese pork satay with sweet soy glaze and peanut sauce.
+                    </p>
                   </div>
                   <div class="menu-price">
                     <span>$18</span>
@@ -194,17 +210,24 @@
           <div class="col-md-4 col-sm-6">
             <!-- MENU THUMB -->
             <div class="menu-thumb">
-              <a href="images/menu/menu3.jpg" class="image-popup" title="Soto">
+              <a
+                href="images/menu/nasi-liwet-komplit.jpg"
+                class="image-popup"
+                title="Soto"
+              >
                 <img
-                  src="images/menu/menu3.jpg"
-                  class="img-responsive"
+                  src="images/menu/nasi-liwet-komplit.jpg"
+                  class="img-responsive nasi-liwet-komplit-img"
                   alt=""
                 />
 
                 <div class="menu-info">
                   <div class="menu-item">
-                    <h3>Soto</h3>
-                    <p>Yellow Tumeric / Chicken Soup</p>
+                    <h3>Nasi Liwet</h3>
+                    <p>
+                      Indonesian rice dish cooked in coconut milk, chicken broth
+                      and spices.
+                    </p>
                   </div>
                   <div class="menu-price">
                     <span>$24</span>
@@ -217,17 +240,23 @@
           <div class="col-md-4 col-sm-6">
             <!-- MENU THUMB -->
             <div class="menu-thumb">
-              <a href="images/menu/menu4.jpg" class="image-popup" title="Pecel">
+              <a
+                href="images/menu/nasi-campur.jpg"
+                class="image-popup"
+                title="Pecel"
+              >
                 <img
-                  src="images/menu/menu4.jpg"
+                  src="images/menu/nasi-campur.jpg"
                   class="img-responsive"
                   alt=""
                 />
 
                 <div class="menu-info">
                   <div class="menu-item">
-                    <h3>Pecel</h3>
-                    <p>Javanese salad / Spicy peanut sauce</p>
+                    <h3>Nasi Campur</h3>
+                    <p>
+                      Scoop of white rice surrounded by meats and vegetables.
+                    </p>
                   </div>
                   <div class="menu-price">
                     <span>$22</span>
@@ -241,20 +270,20 @@
             <!-- MENU THUMB -->
             <div class="menu-thumb">
               <a
-                href="images/menu/menu5.jpg"
+                href="images/menu/kuah-bakut.jpg"
                 class="image-popup"
-                title="Gado Gado"
+                title="Kuah Bakut"
               >
                 <img
-                  src="images/menu/menu5.jpg"
+                  src="images/menu/kuah-bakut.jpg"
                   class="img-responsive"
                   alt=""
                 />
 
                 <div class="menu-info">
                   <div class="menu-item">
-                    <h3>Gado Gado</h3>
-                    <p>Tofu / Potatoes / Peanut sauce</p>
+                    <h3>Kuah Bakut</h3>
+                    <p>Pork ribs, sour pickle soup.</p>
                   </div>
                   <div class="menu-price">
                     <span>$16</span>
@@ -268,20 +297,20 @@
             <!-- MENU THUMB -->
             <div class="menu-thumb">
               <a
-                href="images/menu/menu6.jpg"
+                href="images/menu/balado.jpg"
                 class="image-popup"
-                title="Serabi"
+                title="Balado"
               >
                 <img
-                  src="images/menu/menu6.jpg"
-                  class="img-responsive"
+                  src="images/menu/balado.jpg"
+                  class="img-responsive balado-img"
                   alt=""
                 />
 
                 <div class="menu-info">
                   <div class="menu-item">
-                    <h3>Serabi</h3>
-                    <p>Coconut pancake</p>
+                    <h3>Balado</h3>
+                    <p>Fragrant chilli sambal.</p>
                   </div>
                   <div class="menu-price">
                     <span>$10</span>
@@ -297,26 +326,30 @@
     <!-- ABOUT -->
     <section id="about" data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row">
+        <div class="row flex">
           <div class="col-md-6 col-sm-12">
             <div class="about-info">
               <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
-                <h4>Read our story</h4>
-                <h2>We've been cooking delicious food since 1990</h2>
+                <h4>Our Story</h4>
+                <h2>The 7 humans behind the aprons.</h2>
               </div>
 
               <div class="wow fadeInUp" data-wow-delay="0.4s">
                 <p>
-                  Fusce hendrerit malesuada lacinia. Donec semper semper sem
-                  vitae malesuada. Proin scelerisque risus et ipsum semper
-                  molestie sed in nisi. Ut rhoncus congue lectus, rhoncus
-                  venenatis leo malesuada id.
+                  Coming from separate backgrounds of finance, architecture and
+                  hospitality, with a combined love and passion for food, it was
+                  time for a new venture. Starting as a fun idea as friends
+                  after a few drinks, late night recipe trials, and various
+                  business concepts, came the journey to the beginning of 7
+                  Aprons.
                 </p>
                 <p>
-                  Sed elementum vel felis sed scelerisque. In arcu diam,
-                  sollicitudin eu nibh ac, posuere tristique magna. You can use
-                  this template for your cafe or restaurant website. Please tell
-                  your friends about us, Thank you!
+                  As self-proclaimed foodies, we love to eat. Growing up in
+                  different parts of Asia meant tasting an array of street food
+                  that packed a punch when it comes to flavour, spice and
+                  texture. We want to bring a fusion of this fragrant street
+                  food, together with the warmth of traditional home-cooked
+                  meals to transport people back to the tastes of Asia.
                 </p>
               </div>
             </div>
@@ -324,7 +357,11 @@
 
           <div class="col-md-6 col-sm-12">
             <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
-              <img src="images/about-image.jpg" class="img-responsive" alt="" />
+              <img
+                src="images/about-us-dish.jpg"
+                class="img-responsive about-us-image"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -337,8 +374,8 @@
         <div class="row">
           <div class="col-md-12 col-sm-12">
             <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-              <h2>Meet our chefs</h2>
-              <h4>They're nice &amp; friendly</h4>
+              <h2>Our Chefs</h2>
+              <h4>Meet the 7 humans behind the aprons</h4>
             </div>
           </div>
 
@@ -390,35 +427,19 @@
             <div class="owl-carousel owl-theme">
               <div class="item">
                 <p>
-                  Integer posuere erat a ante venenatis dapibus posuere velit
-                  aliquet. Maecenas faucibus mollis interdum ullamcorper nulla
-                  non.
+                  “Absolutely loved everything, my fave? The keripik kacang
+                  teri. Reminds me of being back in Jakarta…fragrant nasi ijo,
+                  flavoursome and soft dendeng…so good!”
                 </p>
                 <div class="tst-author">
-                  <h4>Digital Carlson</h4>
-                  <span>Pharetra quam sit amet</span>
+                  <h4>- Andria</h4>
                 </div>
               </div>
 
               <div class="item">
-                <p>
-                  Pellentesque habitant morbi tristique senectus et netus et
-                  malesuada fames ac turpis egestas. Sed vestibulum orci quam.
-                </p>
+                <p>“Eating a plate of colourful food is so satisfying.”</p>
                 <div class="tst-author">
-                  <h4>Johnny Stephen</h4>
-                  <span>Magna nisi porta ligula</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <p>
-                  Vivamus aliquet felis eu diam ultricies congue. Morbi porta
-                  lorem nec consectetur porta quis dui elit habitant morbi.
-                </p>
-                <div class="tst-author">
-                  <h4>Jessie White</h4>
-                  <span>Vitae lacinia augue urna quis</span>
+                  <h4>- Jacinta</h4>
                 </div>
               </div>
             </div>
@@ -427,113 +448,117 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ORDER -->
     <section id="contact" data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row">
-          <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="0.4s">
-            <div id="google-map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32222.065368189273!2d115.95573866684884!3d-31.90856967550198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32b9befc4ef6bb%3A0x504f0b535df5130!2sSouth%20Guildford%20WA%206055!5e0!3m2!1sen!2sau!4v1600786451197!5m2!1sen!2sau"
-                width="600"
-                height="450"
-                frameborder="0"
-                style="border: 0"
-                allowfullscreen=""
-                aria-hidden="false"
-                tabindex="0"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-sm-12">
-            <div class="col-md-12 col-sm-12">
-              <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                <h2>Online Order</h2>
-                <p>
-                  Send through a message of your order along with your contact
-                  number and we'll be in touch to confirm payment and delivery
-                  details.
-                </p>
+        <div id="v-form" class="order-form">
+          <h2 class="form-title">{{form.formName}}</h2>
+          <p>
+            Send your order along with your contact number and we'll be in touch
+            to confirm payment and delivery details.
+          </p>
+          <form class="form-container">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" v-model="form.name" />
               </div>
             </div>
 
-            <!-- CONTACT FORM -->
-            <form
-              action="#"
-              method="post"
-              class="wow fadeInUp"
-              id="contact-form"
-              role="form"
-              data-wow-delay="0.8s"
-            >
-              <!-- IF MAIL SENT SUCCESSFUL -->
-              <h6 class="text-success">
-                Your message has been sent successfully.
-              </h6>
-
-              <!-- IF MAIL NOT SENT -->
-              <h6 class="text-danger">
-                E-mail must be valid and message must be longer than 1
-                character.
-              </h6>
-
-              <div class="col-md-6 col-sm-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cf-name"
-                  name="name"
-                  placeholder="Name"
-                />
+            <div class="field">
+              <label class="label">Contact Email</label>
+              <div class="control">
+                <input class="input" type="text" v-model="form.email" />
               </div>
+            </div>
 
-              <div class="col-md-6 col-sm-6">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="cf-email"
-                  name="email"
-                  placeholder="Contact number"
-                />
+            <div class="field">
+              <label class="label">Contact Number</label>
+              <div class="control">
+                <input class="input" type="text" v-model="form.number" />
               </div>
+            </div>
 
-              <div class="col-md-12 col-sm-12">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cf-subject"
-                  name="subject"
-                  placeholder="Delivery Time"
-                />
+            <div class="field">
+              <label class="label">Meals</label>
+              <div class="control">
+                <label>
+                  <select v-model="form.orders[0].quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  Siomay - $8.50
+                </label>
+                <br />
+                <label>
+                  <select v-model="form.orders[1].quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  Sate Babi - $8.50
+                </label>
+                <br />
+                <label>
+                  <select v-model="form.orders[2].quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  Nasi Liwet Komplit - $8.50
+                </label>
+                <br />
+                <label>
+                  <select v-model="form.orders[3].quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  Nasi Campur - $8.50
+                  <hr class="cost-hr" />
+                </label>
+                <br />
+                <label>Order Total: {{ total ? `$${total}` : '' }} </label>
+              </div>
+            </div>
 
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cf-subject"
-                  name="subject"
-                  placeholder="Delivery Address"
-                />
-
+            <div class="field">
+              <label class="label">Additional comments or requests.</label>
+              <div class="control">
                 <textarea
-                  class="form-control"
+                  class="text-area"
+                  cols="30"
                   rows="2"
-                  id="cf-message"
-                  name="messageOrder"
-                  placeholder="Order - dishes and quantities"
+                  v-model="form.other"
                 ></textarea>
-
-                <button
-                  type="submit"
-                  class="form-control"
-                  id="cf-submit"
-                  name="submit"
-                >
-                  Send Order
-                </button>
               </div>
-            </form>
-          </div>
+            </div>
+
+            <button
+              class="btn-aprons order-btn"
+              type="submit"
+              @click.prevent="submitOrder"
+              v-if="!isSubmitting"
+            >
+              Submit order
+            </button>
+            <span class="order-confirmation" v-else>
+              Order sent! Thank you, we'll be in contact to confirm.
+            </span>
+          </form>
         </div>
       </div>
     </section>
@@ -561,6 +586,10 @@
                 </h2>
               </div>
               <address class="wow fadeInUp" data-wow-delay="0.4s">
+                <a href="#contact"
+                  ><button class="btn btn-aprons">Online</button></a
+                >
+                <p>or</p>
                 <a href="tel:0449787801"
                   >Text message only | (+61) 449 787 801</a
                 >
@@ -631,5 +660,8 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>
