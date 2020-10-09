@@ -56,7 +56,6 @@
             <li><a href="#home" class="smoothScroll">Home</a></li>
             <li><a href="#menu" class="smoothScroll">Menu</a></li>
             <li><a href="#about" class="smoothScroll">About</a></li>
-            <li><a href="#team" class="smoothScroll">Chefs</a></li>
             <li><a href="#contact" class="smoothScroll">Contact</a></li>
           </ul>
 
@@ -107,7 +106,7 @@
                   <a
                     href="#team"
                     class="section-btn btn btn-aprons smoothScroll"
-                    >Meet our chefs</a
+                    >Our story</a
                   >
                 </div>
               </div>
@@ -406,14 +405,17 @@
 
     <!-- ORDER -->
     <section id="contact" data-stellar-background-ratio="0.5">
-      <div class="container">
+      <div class="container form-card">
+        <div class="form-card__header"></div>
         <div id="v-form" class="order-form">
-          <h2 class="form-title">{{form.formName}}</h2>
-          <p>
-            Send your order along with your contact number and we'll be in touch
-            to confirm payment and delivery details.
-          </p>
-          <form class="form-container">
+          <div class="form-title">
+            <h2>{{form.formName}}</h2>
+            <p>
+              Send your order along with your contact number and we'll be in
+              touch to confirm payment and delivery details.
+            </p>
+          </div>
+          <form class="form-container order-form__container">
             <div class="field">
               <label class="label">Name</label>
               <div class="control">
@@ -436,6 +438,18 @@
             </div>
 
             <div class="field">
+              <label class="label">Additional comments or requests:</label>
+              <div class="control">
+                <textarea
+                  class="text-area"
+                  cols="18"
+                  rows="1"
+                  v-model="form.other"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="field order-form__meals">
               <label class="label">Meals</label>
               <div class="control">
                 <label>
@@ -491,26 +505,30 @@
               </div>
             </div>
 
-            <div class="field">
-              <label class="label">Additional comments or requests.</label>
-              <div class="control">
-                <textarea
-                  class="text-area"
-                  cols="30"
-                  rows="2"
-                  v-model="form.other"
-                ></textarea>
-              </div>
+            <div class="order-btn-container">
+              <button
+                class="btn-aprons order-btn"
+                type="submit"
+                @click.prevent="submitOrder"
+                v-if="!isSubmitting"
+              >
+                <svg
+                  height="32"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <span>Submit order</span>
+              </button>
             </div>
-
-            <button
-              class="btn-aprons order-btn"
-              type="submit"
-              @click.prevent="submitOrder"
-              v-if="!isSubmitting"
-            >
-              Submit order
-            </button>
             <span class="order-confirmation" v-else>
               Order sent! Thank you, we'll be in contact to confirm.
             </span>
