@@ -34,6 +34,10 @@ new Vue({
       setTimeout(() => {
         this.isSubmitting = false;
       }, 6000);
+    },
+    dishTotalPrice(i) {
+      const order = this.form.orders[i];
+      return order.quantity * order.cost;
     }
   },
   computed: {

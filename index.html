@@ -461,7 +461,7 @@
                 value="0"
                 v-model.number="form.orders[0].quantity"
               />
-              <div></div>
+              <div>{{dishTotalPrice(0)}}</div>
 
               <label>Sate Babi - $8.50</label>
               <input
@@ -471,7 +471,7 @@
                 value="0"
                 v-model.number="form.orders[1].quantity"
               />
-              <div></div>
+              <div>{{dishTotalPrice(1)}}</div>
 
               <label>Nasi Liwet Komplit - $8.50</label>
               <input
@@ -481,7 +481,7 @@
                 value="0"
                 v-model.number="form.orders[2].quantity"
               />
-              <div></div>
+              <div>{{dishTotalPrice(2)}}</div>
 
               <label>Nasi Campur - $8.50</label>
               <input
@@ -491,7 +491,7 @@
                 value="0"
                 v-model.number="form.orders[3].quantity"
               />
-              <div></div>
+              <div>{{dishTotalPrice(3)}}</div>
 
               <div class="order-meals-hr">
                 <hr />
@@ -522,10 +522,10 @@
                 </svg>
                 <span>Submit order</span>
               </button>
+              <span class="order-confirmation" v-else>
+                Order sent! Thank you, we'll be in contact to confirm.
+              </span>
             </div>
-            <span class="order-confirmation" v-else>
-              Order sent! Thank you, we'll be in contact to confirm.
-            </span>
           </form>
         </div>
       </div>
