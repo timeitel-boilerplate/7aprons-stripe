@@ -37,14 +37,30 @@ new Vue({
     },
     dishTotalPrice(i) {
       const order = this.form.orders[i];
-      return order.quantity * order.cost;
+      priceAsInt = order.quantity * order.cost;
+
+      return this.intToPrice(priceAsInt);
+    },
+    intToPrice(number) {
+      var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+
+        // These options are needed to round to whole numbers if that's what you want.
+        //minimumFractionDigits: 0,
+        //maximumFractionDigits: 0,
+      });
+
+      return formatter.format(number);
     }
   },
   computed: {
     total() {
-      return this.form.orders.reduce((acc, order) => {
+      priceAsInt = this.form.orders.reduce((acc, order) => {
         return acc + order.quantity * order.cost;
       }, 0);
+
+      return this.intToPrice(priceAsInt);
     }
   }
 });
