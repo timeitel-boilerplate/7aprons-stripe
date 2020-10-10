@@ -1049,8 +1049,6 @@ footer .social-icon {
 
 .order-btn {
   padding: 4px 8px;
-  font-size: 2.2rem;
-  font-weight: normal;
   border: none;
   margin-top: 20px;
   display: flex;
@@ -1100,7 +1098,7 @@ footer .social-icon {
 /* form card */
 .form-card {
   margin: auto;
-  max-width: 800px;
+  max-width: 700px;
   position: relative;
 }
 
@@ -1158,8 +1156,6 @@ footer .social-icon {
 
 .order-btn-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   height: 70px;
 }
 
