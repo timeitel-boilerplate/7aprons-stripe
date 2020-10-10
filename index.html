@@ -452,50 +452,46 @@
               <label class="label">Meals</label>
               <div class="control">
                 <label>
-                  <select v-model="form.orders[0].quantity">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
+                  <input
+                    type="number"
+                    min="0"
+                    max="50"
+                    value="0"
+                    v-model.number="form.orders[0].quantity"
+                  />
                   Siomay - $8.50
                 </label>
                 <br />
                 <label>
-                  <select v-model="form.orders[1].quantity">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
+                  <input
+                    type="number"
+                    min="0"
+                    max="50"
+                    value="0"
+                    v-model.number="form.orders[1].quantity"
+                  />
                   Sate Babi - $8.50
                 </label>
                 <br />
                 <label>
-                  <select v-model="form.orders[2].quantity">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
+                  <input
+                    type="number"
+                    min="0"
+                    max="50"
+                    value="0"
+                    v-model.number="form.orders[2].quantity"
+                  />
                   Nasi Liwet Komplit - $8.50
                 </label>
                 <br />
                 <label>
-                  <select v-model="form.orders[3].quantity">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
+                  <input
+                    type="number"
+                    min="0"
+                    max="50"
+                    value="0"
+                    v-model.number="form.orders[3].quantity"
+                  />
                   Nasi Campur - $8.50
                   <hr class="cost-hr" />
                 </label>

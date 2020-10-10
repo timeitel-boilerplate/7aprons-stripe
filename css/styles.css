@@ -1150,10 +1150,6 @@ footer .social-icon {
   columns: 2;
 }
 
-.order-form__meals {
-  break-inside: avoid;
-}
-
 .order-btn-container {
   display: flex;
   height: 70px;
@@ -1161,4 +1157,8 @@ footer .social-icon {
 
 .order-btn-container span {
   margin-left: 0.5rem;
+}
+
+.order-form__meals {
+  break-inside: avoid;
 }
