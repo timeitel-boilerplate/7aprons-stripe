@@ -1182,9 +1182,23 @@ footer .social-icon {
   grid-column: span 3;
   height: 2px;
   width: 100%;
-  margin: 0;
+  margin: 0 0 5px;
 }
 
 .order-meals-hr label {
   grid-column: 3;
+}
+
+@media only screen and (max-width: 600px) {
+  .order-form__container {
+    columns: 1;
+  }
+
+  .form-title p {
+    width: 100%;
+  }
+
+  .form-card__header {
+    height: 170px;
+  }
 }
