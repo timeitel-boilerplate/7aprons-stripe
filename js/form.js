@@ -31,7 +31,11 @@ new Vue({
   methods: {
     submitOrder() {
       this.isSubmitting = true;
-      setTimeout(() => {
+      const sleep = (time) =>
+        new Promise((resolve) => setTimeout(resolve, time));
+
+      sleep(5000).then(() => {
+        this.resetForm();
         this.isSubmitting = false;
         this.resetForm();
       }, 6000);
