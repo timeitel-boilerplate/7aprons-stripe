@@ -415,119 +415,122 @@
             </p>
           </div>
           <form class="form-container order-form__container">
-            <div class="field">
-              <label class="label">Name</label>
-              <div class="control">
-                <input class="input" type="text" v-model="form.name" />
+            <div>
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input class="input" type="text" v-model="form.name" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Contact Email</label>
+                <div class="control">
+                  <input class="input" type="text" v-model="form.email" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Contact Number</label>
+                <div class="control">
+                  <input class="input" type="text" v-model="form.number" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Comments or requests:</label>
+                <div class="control">
+                  <textarea
+                    class="text-area"
+                    cols="19"
+                    rows="1"
+                    v-model="form.other"
+                  ></textarea>
+                </div>
               </div>
             </div>
 
-            <div class="field">
-              <label class="label">Contact Email</label>
-              <div class="control">
-                <input class="input" type="text" v-model="form.email" />
+            <div>
+              <div class="field order-form__meals">
+                <label>Dish</label>
+                <label>Quantity</label>
+                <label>Total</label>
+
+                <div class="order-form__dish">
+                  <img src="./images/menu/siomay.jpg" alt="siomay image" />
+                  <label>Siomay - $8.50</label>
+                </div>
+                <input
+                  type="number"
+                  min="0"
+                  max="50"
+                  value="0"
+                  v-model.number="form.orders[0].quantity"
+                />
+                <div>{{dishTotalPrice(0)}}</div>
+
+                <label>Sate Babi - $8.50</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="50"
+                  value="0"
+                  v-model.number="form.orders[1].quantity"
+                />
+                <div>{{dishTotalPrice(1)}}</div>
+
+                <label>Nasi Liwet Komplit - $8.50</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="50"
+                  value="0"
+                  v-model.number="form.orders[2].quantity"
+                />
+                <div>{{dishTotalPrice(2)}}</div>
+
+                <label>Nasi Campur - $8.50</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="50"
+                  value="0"
+                  v-model.number="form.orders[3].quantity"
+                />
+                <div>{{dishTotalPrice(3)}}</div>
+
+                <div class="order-meals-hr">
+                  <hr />
+                  <label>{{ total ? `${total}` : '' }}</label>
+                </div>
               </div>
-            </div>
-
-            <div class="field">
-              <label class="label">Contact Number</label>
-              <div class="control">
-                <input class="input" type="text" v-model="form.number" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label">Comments or requests:</label>
-              <div class="control">
-                <textarea
-                  class="text-area"
-                  cols="19"
-                  rows="1"
-                  v-model="form.other"
-                ></textarea>
-              </div>
-            </div>
-
-            <div class="field order-form__meals">
-              <label>Dish</label>
-              <label>Quantity</label>
-              <label>Total</label>
-
-              <div>
-                <img src="./images/menu-image1.jpg" alt="" />
-                <label>Siomay - $8.50</label>
-              </div>
-              <input
-                type="number"
-                min="0"
-                max="50"
-                value="0"
-                v-model.number="form.orders[0].quantity"
-              />
-              <div>{{dishTotalPrice(0)}}</div>
-
-              <label>Sate Babi - $8.50</label>
-              <input
-                type="number"
-                min="0"
-                max="50"
-                value="0"
-                v-model.number="form.orders[1].quantity"
-              />
-              <div>{{dishTotalPrice(1)}}</div>
-
-              <label>Nasi Liwet Komplit - $8.50</label>
-              <input
-                type="number"
-                min="0"
-                max="50"
-                value="0"
-                v-model.number="form.orders[2].quantity"
-              />
-              <div>{{dishTotalPrice(2)}}</div>
-
-              <label>Nasi Campur - $8.50</label>
-              <input
-                type="number"
-                min="0"
-                max="50"
-                value="0"
-                v-model.number="form.orders[3].quantity"
-              />
-              <div>{{dishTotalPrice(3)}}</div>
-
-              <div class="order-meals-hr">
-                <hr />
-                <label>{{ total ? `${total}` : '' }}</label>
-              </div>
-            </div>
-
-            <div class="order-btn-container">
-              <button
-                class="btn-aprons order-btn"
-                type="submit"
-                @click.prevent="submitOrder"
-                v-if="!isSubmitting"
-              >
-                <svg
-                  height="26"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div class="order-btn-container">
+                <button
+                  class="btn-aprons order-btn"
+                  type="submit"
+                  @click.prevent="submitOrder"
+                  v-if="!isSubmitting"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path>
-                </svg>
-                <span>Submit order</span>
-              </button>
-              <span class="order-confirmation" v-else>
-                Order sent! Thank you, we'll be in contact to confirm.
-              </span>
+                  <svg
+                    height="26"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                  <span>Submit order</span>
+                </button>
+                <span class="order-confirmation" v-else>
+                  Order sent! Thank you, we'll be in contact to confirm.
+                </span>
+              </div>
             </div>
           </form>
         </div>

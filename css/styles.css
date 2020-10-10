@@ -1146,7 +1146,9 @@ footer .social-icon {
 
 .order-form__container {
   margin-top: 50px;
-  columns: 2;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 15px;
 }
 
 .order-btn-container {
@@ -1189,9 +1191,18 @@ footer .social-icon {
   grid-column: 3;
 }
 
+.order-form__dish {
+}
+
+.order-form__dish img {
+  height: 80px;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   .order-form__container {
     columns: 1;
+    display: block;
   }
 
   .form-title p {
