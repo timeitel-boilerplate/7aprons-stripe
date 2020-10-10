@@ -34,6 +34,7 @@ new Vue({
       setTimeout(() => {
         this.isSubmitting = false;
       }, 6000);
+      this.resetForm();
     },
     dishTotalPrice(i) {
       const order = this.form.orders[i];
@@ -45,13 +46,14 @@ new Vue({
       var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'
-
-        // These options are needed to round to whole numbers if that's what you want.
-        //minimumFractionDigits: 0,
-        //maximumFractionDigits: 0,
       });
 
       return formatter.format(number);
+    },
+    resetForm() {
+      this.form.orders.map((order) => {
+        order.quantity = 0;
+      });
     }
   },
   computed: {
