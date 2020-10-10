@@ -441,7 +441,7 @@
               <div class="control">
                 <textarea
                   class="text-area"
-                  cols="18"
+                  cols="19"
                   rows="1"
                   v-model="form.other"
                 ></textarea>
@@ -449,54 +449,53 @@
             </div>
 
             <div class="field order-form__meals">
-              <label class="label">Meals</label>
-              <div class="control">
-                <label>
-                  <input
-                    type="number"
-                    min="0"
-                    max="50"
-                    value="0"
-                    v-model.number="form.orders[0].quantity"
-                  />
-                  Siomay - $8.50
-                </label>
-                <br />
-                <label>
-                  <input
-                    type="number"
-                    min="0"
-                    max="50"
-                    value="0"
-                    v-model.number="form.orders[1].quantity"
-                  />
-                  Sate Babi - $8.50
-                </label>
-                <br />
-                <label>
-                  <input
-                    type="number"
-                    min="0"
-                    max="50"
-                    value="0"
-                    v-model.number="form.orders[2].quantity"
-                  />
-                  Nasi Liwet Komplit - $8.50
-                </label>
-                <br />
-                <label>
-                  <input
-                    type="number"
-                    min="0"
-                    max="50"
-                    value="0"
-                    v-model.number="form.orders[3].quantity"
-                  />
-                  Nasi Campur - $8.50
-                  <hr class="cost-hr" />
-                </label>
-                <br />
-                <label>Order Total: {{ total ? `$${total}` : '' }} </label>
+              <label>Dish</label>
+              <label>Quantity</label>
+              <label>Total</label>
+
+              <label>Siomay - $8.50</label>
+              <input
+                type="number"
+                min="0"
+                max="50"
+                value="0"
+                v-model.number="form.orders[0].quantity"
+              />
+              <div></div>
+
+              <label>Sate Babi - $8.50</label>
+              <input
+                type="number"
+                min="0"
+                max="50"
+                value="0"
+                v-model.number="form.orders[1].quantity"
+              />
+              <div></div>
+
+              <label>Nasi Liwet Komplit - $8.50</label>
+              <input
+                type="number"
+                min="0"
+                max="50"
+                value="0"
+                v-model.number="form.orders[2].quantity"
+              />
+              <div></div>
+
+              <label>Nasi Campur - $8.50</label>
+              <input
+                type="number"
+                min="0"
+                max="50"
+                value="0"
+                v-model.number="form.orders[3].quantity"
+              />
+              <div></div>
+
+              <div class="order-meals-hr">
+                <hr />
+                <label>{{ total ? `$${total}` : '' }}</label>
               </div>
             </div>
 

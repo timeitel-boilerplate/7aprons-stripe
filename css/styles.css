@@ -1050,7 +1050,6 @@ footer .social-icon {
 .order-btn {
   padding: 4px 8px;
   border: none;
-  margin-top: 20px;
   display: flex;
   align-items: center;
 }
@@ -1098,7 +1097,7 @@ footer .social-icon {
 /* form card */
 .form-card {
   margin: auto;
-  max-width: 700px;
+  max-width: 800px;
   position: relative;
 }
 
@@ -1152,7 +1151,8 @@ footer .social-icon {
 
 .order-btn-container {
   display: flex;
-  height: 70px;
+  height: 40px;
+  justify-content: flex-end;
 }
 
 .order-btn-container span {
@@ -1161,4 +1161,30 @@ footer .social-icon {
 
 .order-form__meals {
   break-inside: avoid;
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.order-form__meals input {
+  width: 60px;
+}
+
+.order-meals-hr {
+  grid-column: span 3;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.order-meals-hr hr {
+  grid-column: span 3;
+  height: 2px;
+  width: 100%;
+  margin: 0;
+}
+
+.order-meals-hr label {
+  grid-column: 3;
 }
