@@ -1166,7 +1166,7 @@ footer .social-icon {
   display: grid;
   gap: 20px;
   align-items: center;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
 }
 
 .order-form__meals input {
@@ -1177,7 +1177,7 @@ footer .social-icon {
   grid-column: span 3;
   display: grid;
   column-gap: 20px;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
 }
 
 .order-meals-hr hr {
@@ -1192,11 +1192,20 @@ footer .social-icon {
 }
 
 .order-form__dish {
+  display: flex;
+}
+
+.order-form__dish label {
+  color: rgba(45, 55, 72, 0.8);
 }
 
 .order-form__dish img {
-  height: 80px;
+  height: 100px;
+  width: 130px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 10px;
+  margin-right: 5px;
 }
 
 @media only screen and (max-width: 600px) {
