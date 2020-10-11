@@ -414,26 +414,50 @@
               touch to confirm payment and delivery details.
             </p>
           </div>
-          <form class="form-container order-form__container">
+          <form
+            enctype="text/plain"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeGBz0kYiFOZiwVZs4DCDSkSKaluBEblNVjxu0XuFyl0iLocw/formResponse?"
+            class="form-container order-form__container"
+            target="hidden_iframe"
+            id="gform"
+          >
             <div>
               <div class="field">
                 <label class="label">Name</label>
                 <div class="control">
-                  <input class="input" type="text" v-model="form.name" />
+                  <input
+                    class="input"
+                    name="entry.1000020"
+                    id="entry.1000020"
+                    type="text"
+                    v-model="form.name"
+                  />
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Contact Email</label>
                 <div class="control">
-                  <input class="input" type="text" v-model="form.email" />
+                  <input
+                    class="input"
+                    name="entry.1000025"
+                    id="entry.1000025"
+                    type="text"
+                    v-model="form.email"
+                  />
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Contact Number</label>
                 <div class="control">
-                  <input class="input" type="text" v-model="form.number" />
+                  <input
+                    class="input"
+                    name="entry.1000022"
+                    id="entry.1000022"
+                    type="text"
+                    v-model="form.number"
+                  />
                 </div>
               </div>
 
@@ -445,6 +469,8 @@
                     cols="19"
                     rows="1"
                     v-model="form.other"
+                    name="entry.1000023"
+                    id="entry.1000023"
                   ></textarea>
                 </div>
               </div>
@@ -487,6 +513,8 @@
                   min="0"
                   max="50"
                   value="0"
+                  name="entry.66673281"
+                  id="entry.66673281"
                   v-model.number="form.orders[1].quantity"
                 />
                 <div>{{dishTotalPrice(1)}}</div>
@@ -538,7 +566,6 @@
                 <button
                   class="btn-aprons order-btn"
                   type="submit"
-                  @click.prevent="submitOrder"
                   v-if="!isSubmitting"
                 >
                   <svg
@@ -563,6 +590,12 @@
               </div>
             </div>
           </form>
+
+          <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display: none"
+          ></iframe>
         </div>
       </div>
     </section>
