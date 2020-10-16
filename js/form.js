@@ -33,8 +33,8 @@ new Vue({
       this.isSubmitting = true;
       setTimeout(() => {
         this.isSubmitting = false;
+        this.resetForm();
       }, 6000);
-      this.resetForm();
     },
     dishTotalPrice(i) {
       const order = this.form.orders[i];
@@ -54,6 +54,10 @@ new Vue({
       this.form.orders.map((order) => {
         order.quantity = 0;
       });
+      this.form.name = '';
+      this.form.email = '';
+      this.form.number = '';
+      this.form.other = '';
     }
   },
   computed: {
