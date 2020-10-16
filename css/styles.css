@@ -1094,6 +1094,11 @@ footer .social-icon {
 }
 
 /* form card */
+#gform .required::after {
+  color: red;
+  content: '*';
+}
+
 .form-card {
   margin: auto;
   max-width: 800px;
