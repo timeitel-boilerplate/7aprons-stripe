@@ -588,8 +588,8 @@ navbar-right {
 .menu-thumb .menu-info h3,
 .menu-thumb .menu-info p,
 .menu-thumb .menu-info span {
-  transform: translateY(100%);
-  opacity: 0;
+  /* transform: translateY(100%); */
+  /* opacity: 0; */
   display: block;
   transition: 0.5s 0.2s;
   color: #ffffff;
@@ -611,12 +611,13 @@ navbar-right {
 .menu-thumb:hover .menu-info h3,
 .menu-thumb:hover .menu-info p,
 .menu-thumb:hover .menu-info span {
-  transform: translateY(0px);
+  /* transform: translateY(0px); */
   opacity: 1;
 }
 
-.menu-thumb:hover .menu-info {
+.menu-thumb .menu-info {
   background: rgba(0, 0, 0, 0.8);
+  color: #d9d9d9;
 }
 
 /*---------------------------------------
