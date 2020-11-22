@@ -1212,6 +1212,12 @@ footer .social-icon {
   margin-right: 5px;
 }
 
+.navbar-menu,
+.navbar-right {
+  display: flex !important;
+  align-items: center;
+}
+
 @media only screen and (max-width: 600px) {
   .order-form__container {
     columns: 1;
@@ -1225,4 +1231,14 @@ footer .social-icon {
   .form-card__header {
     height: 170px;
   }
+}
+
+@media only screen and (max-width: 770px) {
+  .navbar-right {
+    display: block !important;
+  }
+}
+
+.mr-2 {
+  margin-right: 0.25rem;
 }
