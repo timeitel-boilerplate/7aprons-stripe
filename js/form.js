@@ -8,19 +8,19 @@ new Vue({
       number: '',
       orders: [
         {
-          quantity: 0,
+          quantity: '',
           cost: 8.5
         },
         {
-          quantity: 0,
+          quantity: '',
           cost: 8.5
         },
         {
-          quantity: 0,
+          quantity: '',
           cost: 8.5
         },
         {
-          quantity: 0,
+          quantity: '',
           cost: 8.5
         }
       ],

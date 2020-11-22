@@ -515,8 +515,8 @@
                   type="number"
                   min="0"
                   max="50"
-                  value="0"
-                  v-model.number="form.orders[0].quantity"
+                  required
+                  v-model="form.orders[0].quantity"
                   name="entry.66673281"
                   id="entry.66673281"
                 />
@@ -536,7 +536,7 @@
                   type="number"
                   min="0"
                   max="50"
-                  value="0"
+                  required
                   name="entry.1636714792"
                   id="entry.1636714792"
                   v-model.number="form.orders[1].quantity"
@@ -557,7 +557,7 @@
                   type="number"
                   min="0"
                   max="50"
-                  value="0"
+                  required
                   v-model.number="form.orders[2].quantity"
                   name="entry.1216691274"
                   id="entry.1216691274"
@@ -578,7 +578,7 @@
                   type="number"
                   min="0"
                   max="50"
-                  value="0"
+                  required
                   v-model.number="form.orders[3].quantity"
                   name="entry.1079844956"
                   id="entry.1079844956"
@@ -719,6 +719,7 @@
     </footer>
 
     <!-- SCRIPTS -->
+    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
