@@ -452,6 +452,7 @@ navbar-right {
 
 #about {
   padding-bottom: 100px;
+  padding-top: 50px;
 }
 
 .about-info {
@@ -531,6 +532,7 @@ navbar-right {
 
 #menu {
   padding-bottom: 0;
+  padding-top: 50px;
 }
 
 #menu .container {
@@ -1242,4 +1244,8 @@ footer .social-icon {
 
 .mr-2 {
   margin-right: 0.25rem;
+}
+
+.embedded-menu {
+  max-width: 450px;
 }
