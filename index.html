@@ -160,10 +160,13 @@
             <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
               <!-- <h2>Our Menu</h2> -->
               <h4>Authentic Indonesian / Malaysian Cuisine</h4>
-              <img class="embedded-menu" src="./7aprons-menu.jpg" alt="7 Aprons menu">
+              <img
+                class="embedded-menu"
+                src="./7aprons-menu.jpg"
+                alt="7 Aprons menu"
+              />
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -313,112 +316,22 @@
               </div>
 
               <div class="field">
-                <label class="label">Comments or requests:</label>
+                <label class="label required"
+                  >Order Details (dishes and quantities):
+                </label>
                 <div class="control">
                   <textarea
                     class="text-area"
-                    cols="19"
-                    rows="1"
+                    cols="45"
+                    rows="4"
                     v-model="form.other"
                     name="entry.1000023"
                     id="entry.1000023"
+                    required
                   ></textarea>
                 </div>
               </div>
-            </div>
 
-            <div>
-              <div class="field order-form__meals">
-                <label>Dish</label>
-                <label>Quantity</label>
-                <label>Total</label>
-
-                <div class="order-form__dish">
-                  <img src="./images/menu/siomay.jpg" alt="siomay image" />
-                  <div>
-                    <label>Siomay</label>
-                    <p>$8.50</p>
-                  </div>
-                </div>
-                <input
-                  type="number"
-                  min="0"
-                  max="50"
-                  required
-                  v-model="form.orders[0].quantity"
-                  name="entry.66673281"
-                  id="entry.66673281"
-                />
-                <div>{{dishTotalPrice(0)}}</div>
-
-                <div class="order-form__dish">
-                  <img
-                    src="./images/menu/sate-babi-2.jpg"
-                    alt="sate babi image"
-                  />
-                  <div>
-                    <label>Sate Babi </label>
-                    <p>$8.50</p>
-                  </div>
-                </div>
-                <input
-                  type="number"
-                  min="0"
-                  max="50"
-                  required
-                  name="entry.1636714792"
-                  id="entry.1636714792"
-                  v-model.number="form.orders[1].quantity"
-                />
-                <div>{{dishTotalPrice(1)}}</div>
-
-                <div class="order-form__dish">
-                  <img
-                    src="./images/menu/nasi-liwet-komplit.jpg"
-                    alt="nasi liwet image"
-                  />
-                  <div>
-                    <label>Nasi Liwet Komplit</label>
-                    <p>$8.50</p>
-                  </div>
-                </div>
-                <input
-                  type="number"
-                  min="0"
-                  max="50"
-                  required
-                  v-model.number="form.orders[2].quantity"
-                  name="entry.1216691274"
-                  id="entry.1216691274"
-                />
-                <div>{{dishTotalPrice(2)}}</div>
-
-                <div class="order-form__dish">
-                  <img
-                    src="./images/menu/nasi-campur.jpg"
-                    alt="Nasi Campur image"
-                  />
-                  <div>
-                    <label>Nasi Campur </label>
-                    <p>$8.50</p>
-                  </div>
-                </div>
-                <input
-                  type="number"
-                  min="0"
-                  max="50"
-                  required
-                  v-model.number="form.orders[3].quantity"
-                  name="entry.1079844956"
-                  id="entry.1079844956"
-                />
-                <div>{{dishTotalPrice(3)}}</div>
-
-                <div class="order-meals-hr">
-                  <hr />
-                  <label>{{ total ? `${total}` : '' }}</label>
-                </div>
-              </div>
               <div class="order-btn-container">
                 <button
                   class="btn-aprons order-btn"

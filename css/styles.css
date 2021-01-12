@@ -1155,13 +1155,12 @@ footer .social-icon {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-column-gap: 15px;
 }
 
 .order-btn-container {
   display: flex;
   height: 40px;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .order-btn-container span {
