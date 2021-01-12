@@ -1246,5 +1246,6 @@ footer .social-icon {
 }
 
 .embedded-menu {
+  width: 100%;
   max-width: 450px;
 }
