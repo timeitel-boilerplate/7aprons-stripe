@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
 
+    <script src="https://js.stripe.com/v3/"></script>
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -56,6 +58,7 @@
             <li><a href="#home" class="smoothScroll">Home</a></li>
             <li><a href="#menu" class="smoothScroll">Menu</a></li>
             <li><a href="#about" class="smoothScroll">About</a></li>
+            <li><button id="checkout-button">Checkout</button></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -461,7 +464,7 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script> -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
@@ -470,8 +473,37 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <script src="js/form.js"></script>
+    <!-- <script src="js/form.js"></script> -->
+
+    <script type="text/javascript">
+      var stripe = Stripe(
+        "pk_test_51IUiTqDJrsoPxmlZ4eQXagZ4DZQL5PcmdQVA5G4WxWIPMSwWb79m4VqWhnN3bDk7pVDxIXPxkWv34F8fL53tL0kV00TdZK3vhX"
+      );
+      var checkoutButton = document.getElementById("checkout-button");
+
+      checkoutButton.addEventListener("click", function () {
+        // Create a new Checkout Session using the server-side endpoint
+        fetch("/create-checkout-session", {
+          method: "POST",
+        })
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (session) {
+            return stripe.redirectToCheckout({ sessionId: session.id });
+          })
+          .then(function (result) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to
+            // customer using `error.message`.
+            if (result.error) {
+              alert(result.error.message);
+            }
+          })
+          .catch(function (error) {
+            console.error("Error:", error);
+          });
+      });
+    </script>
   </body>
 </html>
