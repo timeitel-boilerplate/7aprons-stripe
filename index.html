@@ -482,7 +482,6 @@
       var checkoutButton = document.getElementById("checkout-button");
 
       checkoutButton.addEventListener("click", function () {
-        // Create a new Checkout Session using the server-side endpoint
         fetch("/create-checkout-session", {
           method: "POST",
         })
